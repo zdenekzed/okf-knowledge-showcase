@@ -1,0 +1,15 @@
+config {
+  type: "declaration",
+  database: "folio-raw-demo",
+  schema: "shop",
+  name: "raw_orders",
+  description: "Order events exported from the shop backend, one row per order.",
+  columns: {
+    order_id: "Order identifier.",
+    customer_id: "Customer identifier.",
+    ordered_at: "Order timestamp in UTC.",
+    country_code: "ISO 3166-1 alpha-2 code of the shipping country.",
+    amount_eur: "Order value in EUR after discounts, before refunds.",
+    status: "Order status: paid, refunded or cancelled."
+  }
+}

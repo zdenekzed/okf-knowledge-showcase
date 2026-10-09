@@ -1,0 +1,4 @@
+defaultProject: folio-dwh-demo
+defaultLocation: EU
+defaultDataset: analytics
+dataformCoreVersion: 3.0.0

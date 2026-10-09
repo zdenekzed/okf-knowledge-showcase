@@ -1,0 +1,35 @@
+config {
+  type: "table",
+  schema: "analytics",
+  description: "One row per customer and month in which the customer ordered, with the customer's cohort month.",
+  tags: ["daily"],
+  bigquery: {
+    partitionBy: "order_month",
+    clusterBy: ["customer_id"]
+  },
+  columns: {
+    customer_id: "Customer identifier.",
+    order_month: "Month in which the customer ordered.",
+    cohort_month: "Month of the customer's first order. Never changes.",
+    orders: "Number of orders of the customer in the month.",
+    net_revenue_eur: "Net revenue of the customer in the month, EUR."
+  }
+}
+
+WITH monthly AS (
+  SELECT
+    customer_id,
+    order_month,
+    COUNT(*) AS orders,
+    SUM(net_amount_eur) AS net_revenue_eur
+  FROM ${ref("stg_orders")}
+  GROUP BY customer_id, order_month
+)
+
+SELECT
+  customer_id,
+  order_month,
+  MIN(order_month) OVER (PARTITION BY customer_id) AS cohort_month,
+  orders,
+  net_revenue_eur
+FROM monthly

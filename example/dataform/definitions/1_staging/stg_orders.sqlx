@@ -1,0 +1,22 @@
+config {
+  type: "view",
+  schema: "staging",
+  description: "Paid and refunded orders with their order month. Cancelled orders are dropped; refunded orders count with zero revenue.",
+  tags: ["daily"],
+  columns: {
+    order_id: "Order identifier.",
+    customer_id: "Customer identifier.",
+    order_month: "First day of the calendar month of the order (UTC).",
+    country_code: "ISO 3166-1 alpha-2 code of the shipping country.",
+    net_amount_eur: "Order value in EUR, zero for refunded orders."
+  }
+}
+
+SELECT
+  order_id,
+  customer_id,
+  DATE_TRUNC(DATE(ordered_at), MONTH) AS order_month,
+  country_code,
+  IF(status = "refunded", 0, amount_eur) AS net_amount_eur
+FROM ${ref("raw_orders")}
+WHERE status IN ("paid", "refunded")

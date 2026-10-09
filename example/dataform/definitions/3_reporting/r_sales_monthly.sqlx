@@ -1,0 +1,26 @@
+config {
+  type: "table",
+  database: "folio-analytics-demo",
+  schema: "reporting",
+  description: "Monthly sales by shipping country: orders, active customers and net revenue.",
+  tags: ["daily", "dp-sales-overview"],
+  bigquery: {
+    partitionBy: "order_month"
+  },
+  columns: {
+    order_month: "Month of the orders.",
+    country_code: "Shipping country.",
+    orders: "Number of paid or refunded orders.",
+    active_customers: "Distinct customers with at least one order.",
+    net_revenue_eur: "Net revenue in EUR."
+  }
+}
+
+SELECT
+  order_month,
+  country_code,
+  COUNT(*) AS orders,
+  COUNT(DISTINCT customer_id) AS active_customers,
+  SUM(net_amount_eur) AS net_revenue_eur
+FROM ${ref("stg_orders")}
+GROUP BY order_month, country_code

@@ -1,0 +1,50 @@
+# Settings shared by every okf-showcase command.
+# All projects, datasets and names are fictional.
+
+vault: knowledge                         # the Obsidian vault with all OKF files
+dataform: example/dataform               # the Dataform repository the tables come from
+bigquery_snapshot: example/bigquery/information_schema.json
+
+# GCP project map: which project holds what. A table record names its project in `resource`,
+# and the validator rejects a table whose project is not listed here.
+gcp_projects:
+  folio-raw-demo:
+    role: sources
+    holds: "Landing tables written by the shop backend export. Dataform only declares them."
+  folio-dwh-demo:
+    role: transformation
+    holds: "Dataform execution (defaultProject), staging and analytics layers."
+  folio-analytics-demo:
+    role: analytics
+    holds: "Reporting marts, the Dataplex business glossary, the data agents."
+
+# Projects whose BigQuery column descriptions are read (INFORMATION_SCHEMA). A description in
+# BigQuery wins over the one in Dataform; tables in other projects keep the Dataform text.
+bigquery_description_projects:
+  - folio-analytics-demo
+
+# Where the glossary is published.
+dataplex:
+  project: folio-analytics-demo
+  location: europe-west1
+  glossary: folio-business-glossary
+
+# One-line descriptions of vault directories, used in the generated index.md files
+# (OKF v0.1 section 6: progressive disclosure). Key "" is the vault root.
+index_descriptions:
+  "": "Folio knowledge vault: business glossary, pipeline catalog and brain. Start with the three layers below."
+  glossary: "What business words mean: definitions, formulas, additivity, synonyms, column bindings."
+  glossary/terms: "One file per business term, grouped by category."
+  glossary/terms/metrics: "Measures: how they are computed and how they may be aggregated."
+  glossary/terms/entities: "Business entities and dimensions: customer, country, cohort month."
+  pipeline: "Where the data physically is: generated table records, curated semantics, product contracts."
+  pipeline/tables: "GENERATED from Dataform, one record per .sqlx file. Never edit by hand."
+  pipeline/tables/0_sources: "Declared source tables written by other systems."
+  pipeline/tables/1_staging: "Cleaned views over the sources."
+  pipeline/tables/2_analytics: "Reusable analytical tables at customer grain."
+  pipeline/tables/3_reporting: "Reporting marts read by dashboards and agents."
+  pipeline/semantics: "Curated meaning of tables: grain, column kinds, aggregation rules, golden queries."
+  pipeline/products: "Data product contracts: public tables and the metrics they publish."
+  brain: "How to use the knowledge: cross-cutting rules and agent context bundles."
+  brain/concepts: "Rules and architecture that span terms and tables."
+  brain/bundles: "Specs of context bundles, compiled per agent into dist/bundles/."

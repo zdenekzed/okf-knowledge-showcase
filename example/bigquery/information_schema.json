@@ -1,0 +1,8 @@
+{
+  "_comment": "Snapshot of column descriptions as BigQuery returns them from INFORMATION_SCHEMA.COLUMN_FIELD_PATHS. In a real setup this is a query, see docs/04-back-to-gcp.md.",
+  "folio-analytics-demo.reporting.r_sales_monthly": {
+    "net_revenue_eur": "Net revenue in EUR: paid orders at their value after discounts, refunded orders at zero. Written by the Dataplex description workflow.",
+    "active_customers": "Distinct customers with at least one paid or refunded order in the month and country. Not additive across countries or months."
+  },
+  "folio-analytics-demo.reporting.r_customer_retention_monthly": {}
+}
