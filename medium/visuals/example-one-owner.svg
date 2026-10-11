@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 356" width="700" height="356" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#616e7c"/>
+    </marker>
+    <style>
+      .hand { fill:#e6f4ee; stroke:#9ccfb8; }
+      .gen  { fill:#f1f3f5; stroke:#cfd6dd; }
+      .ctl  { fill:#e8f0fe; stroke:#a9c1f5; }
+      .use  { fill:#f3e8ff; stroke:#cdb3f5; }
+      .plan { fill:#fffaf0; stroke:#d97706; stroke-width:1.5; stroke-dasharray:5 4; }
+      .head { font-size:12px; font-weight:700; fill:#616e7c; letter-spacing:.04em; }
+      .t    { font-size:14.5px; font-weight:700; fill:#1f2933; }
+      .s    { font-size:13px; fill:#616e7c; }
+      .lg   { font-size:13px; fill:#1f2933; }
+      .flow { stroke:#616e7c; stroke-width:1.5; fill:none; }
+    </style>
+  </defs>
+  <rect width="700" height="356" fill="#ffffff"/>
+
+  <text class="head" x="106" y="26" text-anchor="middle">EDITED ONCE</text>
+  <text class="head" x="350" y="26" text-anchor="middle">CHECKED</text>
+  <text class="head" x="592" y="26" text-anchor="middle">COMPILED</text>
+
+  <!-- owners -->
+  <rect class="hand" x="16" y="44" width="180" height="52" rx="9"/>
+  <text class="t" x="106" y="66" text-anchor="middle">Glossary terms</text>
+  <text class="s" x="106" y="84" text-anchor="middle">meaning, formula</text>
+
+  <rect class="hand" x="16" y="108" width="180" height="52" rx="9"/>
+  <text class="t" x="106" y="130" text-anchor="middle">Semantics overlays</text>
+  <text class="s" x="106" y="148" text-anchor="middle">grain, how to count</text>
+
+  <rect class="hand" x="16" y="172" width="180" height="52" rx="9"/>
+  <text class="t" x="106" y="194" text-anchor="middle">Product contracts</text>
+  <text class="s" x="106" y="212" text-anchor="middle">public tables</text>
+
+  <rect class="gen" x="16" y="236" width="180" height="52" rx="9"/>
+  <text class="t" x="106" y="258" text-anchor="middle">Table records</text>
+  <text class="s" x="106" y="276" text-anchor="middle">generated from Dataform</text>
+
+  <!-- gate -->
+  <rect class="ctl" x="260" y="44" width="180" height="244" rx="9"/>
+  <text class="t" x="350" y="132" text-anchor="middle">Validator</text>
+  <text class="s" x="350" y="154" text-anchor="middle">links, columns, projects,</text>
+  <text class="s" x="350" y="172" text-anchor="middle">ratios, token budgets</text>
+  <text class="s" x="350" y="200" text-anchor="middle">same command in CI</text>
+  <text class="s" x="350" y="218" text-anchor="middle">and on a laptop</text>
+
+  <!-- compiled views -->
+  <rect class="use" x="502" y="72" width="182" height="52" rx="9"/>
+  <text class="t" x="593" y="94" text-anchor="middle">Dataplex glossary</text>
+  <text class="s" x="593" y="112" text-anchor="middle">terms + column links</text>
+
+  <rect class="use" x="502" y="140" width="182" height="52" rx="9"/>
+  <text class="t" x="593" y="162" text-anchor="middle">Agent bundles</text>
+  <text class="s" x="593" y="180" text-anchor="middle">compiled per agent</text>
+
+  <rect class="plan" x="502" y="208" width="182" height="52" rx="9"/>
+  <text class="t" x="593" y="230" text-anchor="middle">Property graph</text>
+  <text class="s" x="593" y="248" text-anchor="middle">optional</text>
+
+  <line class="flow" x1="198" y1="70"  x2="257" y2="70"  marker-end="url(#arrow)"/>
+  <line class="flow" x1="198" y1="134" x2="257" y2="134" marker-end="url(#arrow)"/>
+  <line class="flow" x1="198" y1="198" x2="257" y2="198" marker-end="url(#arrow)"/>
+  <line class="flow" x1="198" y1="262" x2="257" y2="262" marker-end="url(#arrow)"/>
+  <line class="flow" x1="442" y1="98"  x2="499" y2="98"  marker-end="url(#arrow)"/>
+  <line class="flow" x1="442" y1="166" x2="499" y2="166" marker-end="url(#arrow)"/>
+  <line class="flow" x1="442" y1="234" x2="499" y2="234" marker-end="url(#arrow)" stroke-dasharray="4 3"/>
+
+  <!-- legend -->
+  <line x1="16" y1="310" x2="684" y2="310" stroke="#e4e7eb"/>
+  <rect class="hand" x="16"  y="325" width="14" height="14" rx="4"/><text class="lg" x="36"  y="337">written by a person</text>
+  <rect class="gen"  x="166" y="325" width="14" height="14" rx="4"/><text class="lg" x="186" y="337">generated</text>
+  <rect class="ctl"  x="262" y="325" width="14" height="14" rx="4"/><text class="lg" x="282" y="337">check</text>
+  <rect class="use"  x="334" y="325" width="14" height="14" rx="4"/><text class="lg" x="354" y="337">read by people and agents</text>
+  <rect class="plan" x="527" y="325" width="14" height="14" rx="4"/><text class="lg" x="547" y="337">optional</text>
+</svg>

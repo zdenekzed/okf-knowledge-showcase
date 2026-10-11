@@ -1,0 +1,71 @@
+—
+\bdelv(e|es|ing)\b
+\btapestr
+\blandscape
+\brealm
+\bleverag
+\brobust
+\bseamless
+\bunlock
+\bempower
+\belevat
+\bfoster
+\bcrucial
+\bpivotal
+\bgame.?changer
+\bcutting.edge
+\bnavigat(e|es|ing) (the|this|a)\b
+\bjourney
+\btestament
+\bever.(evolving|changing)
+\bcomprehensive
+\bstreamlin
+\bholistic
+\bparadigm
+\bsynerg
+\bmeticulous
+\bintricate
+\bembark
+\bresonat
+\bsupercharg
+\bactionable insight
+\bunderscor
+\bin today's
+\bfast.paced
+\bin the world of\b
+\bwhen it comes to\b
+\bwhether you're\b
+\bhave you ever\b
+\blet's (dive|explore|take a look)
+\bdive (in|into)\b
+\bdeep dive
+\bat its core\b
+\bit's (important|worth) (to note|noting|mentioning)
+\bit is (important|worth) (to note|noting|mentioning)
+\bin conclusion\b
+\bin summary\b
+\bkey takeaways?\b
+\bhere's the (thing|catch|kicker)
+\bthe (result|catch|answer)\?
+\b(isn't|is not|it's not|it is not) just\b
+(^|\. )(moreover|furthermore|additionally),
+\bv dnešní (době|rychle)
+\bpojďme se
+\bponoř(it|íme|me)
+\bklíčov
+\bzásadní
+\brobustní
+\bkomplexní
+\bbezproblémov
+\bnejen\b
+\bje (důležité|dobré) (zmínit|poznamenat|říci|říct)
+\bstojí za zmínku
+\bzávěrem\b
+\bv neposlední řadě
+\bv konečném důsledku
+\bna konci dne
+\b(udělat|dělá|udělá) smysl
+\bna (další|vyšší) úroveň
+\bve světě (dat|AI|umělé)
+\brevoluční
+\bfascinující

@@ -28,6 +28,7 @@ Start at [knowledge/index.md](knowledge/index.md) and follow the indexes down: e
 | Which tables an analytics agent may use | `assets` of `knowledge/pipeline/products/dp-*.md` |
 | Which GCP project holds what | `okf.yaml` (`gcp_projects`) and [gcp-project-map](knowledge/brain/concepts/gcp-project-map.md) |
 | Why something is built this way | `docs/` and `docs/decisions/` |
+| How to write an article in `medium/` | `medium/writing-style.md`, `medium/visual-style.md`; workflow in `medium/README.md` |
 
 ## Rules for changing things
 

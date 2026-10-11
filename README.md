@@ -94,6 +94,7 @@ knowledge/                the OKF vault: one Markdown file per fact
 src/okf_showcase/         the tools, one module per step
 templates/                starting points for each document type
 docs/                     why it is built this way
+medium/                   drafts of articles about the principles (not part of the build)
 dist/                     build output (not committed)
 ```
 
